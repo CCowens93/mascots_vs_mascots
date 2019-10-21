@@ -29,7 +29,7 @@ mascotRouter.get('/mascot', (req, res) => {
 })
 //getOne
 mascotRouter.get('/mascot/:id', (req, res) => {
-  mascotApi.getCollegeMascot(req.params.id)
+  mascotApi.getOneCollegeMascot(req.params.id)
   .then((oneCollegeMascot) => {
     res.render('oneCollegeMascot', oneCollegeMascot)
   })
@@ -43,7 +43,7 @@ mascotRouter.put('/mascot/:id', (req, res) => {
 })
 //create
 mascotRouter.post('/mascot', (req, res) => {
-  mascotApi.addNewIssue(req.body)
+  mascotApi.addNewCollegeMascot(req.body)
   .then((createdCollegeMascot) => {
     res.redirect('/mascot')
   })
