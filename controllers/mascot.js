@@ -8,6 +8,18 @@ const mascotApi = require('../models/mascot.js')
 const mascotRouter = express.Router()
 
 
+mascotRouter.get('/mascot/new', (req, res) => {
+  res.render('newCollegeMascotForm')
+})
+
+mascotRouter.get('/mascot/edit/:id', (req, res) => {
+  mascotApi.getOneCollegeMascot(req.params.id)
+  .then((oneCollegeMascot) => {
+    res.render('editCollegeMascotForm', oneCollegeMascot)
+  })
+})
+
+
 //getAll
 mascotRouter.get('/mascot', (req, res) => {
     mascotApi.getAllCollegeMascots()
@@ -17,16 +29,9 @@ mascotRouter.get('/mascot', (req, res) => {
 })
 //getOne
 mascotRouter.get('/mascot/:id', (req, res) => {
-  mascotApi.getIssue(req.params.id)
+  mascotApi.getCollegeMascot(req.params.id)
   .then((oneCollegeMascot) => {
     res.render('oneCollegeMascot', oneCollegeMascot)
-  })
-})
-//create
-mascotRouter.post('/mascot', (req, res) => {
-  mascotApi.addNewIssue(req.body)
-  .then((createdCollegeMascot) => {
-    res.redirect('/mascot')
   })
 })
 //update
@@ -36,6 +41,13 @@ mascotRouter.put('/mascot/:id', (req, res) => {
     res.redirect(`/mascot/${req.params.id}`)
   })
 })
+//create
+mascotRouter.post('/mascot', (req, res) => {
+  mascotApi.addNewIssue(req.body)
+  .then((createdCollegeMascot) => {
+    res.redirect('/mascot')
+  })
+})
 //delete
 mascotRouter.delete('/mascot/:id', (req, res) => {
   mascotApi.deleteCollegeMascot(req.params.id)
@@ -43,6 +55,8 @@ mascotRouter.delete('/mascot/:id', (req, res) => {
     res.redirect('/mascot')
   })
 })
+
+
 
 
 

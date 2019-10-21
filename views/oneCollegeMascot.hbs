@@ -1,0 +1,26 @@
+<p>{{mascot}}</p>
+
+<p>College: {{college}}</p>
+<p>Game Time: {{gameTime}}</p>
+<p>Strengths: {{strengths}}</p>
+<p>Weaknesses: {{weaknesses}}</p>
+
+<a href="/mascot/edit/{{_id}}">
+<button>Edit Mascot</button>
+</a>
+
+
+
+{{#each getCollegeMascot}}
+    <a href="/mascot/{{_id}}">
+    </a>
+{{/each}}
+
+
+<form action="/mascot/{{_id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Mascot" />
+</form>
+
+<a href="/mascot">
+      <button> Home </button>
+    </a>

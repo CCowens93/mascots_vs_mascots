@@ -3,7 +3,7 @@ const mongoose = require('./connection.js');
 const collegeMascotSchema = new mongoose.Schema({
     college: String,
     mascot: String,
-    timeOfGame: Date,
+    gameTime: Date,
     strengths: String,
     weaknesses: String,
 })
