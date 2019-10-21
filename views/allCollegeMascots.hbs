@@ -1,0 +1,10 @@
+<h1>All College Mascots</h1>
+
+<a href="/mascot/new">Create New College Mascot</a>
+
+
+{{#each allCollegeMascots}}
+<a href="/mascot/{{_id}}">
+    <p>{{description}}</p>
+</a>
+{{/each}}
