@@ -17,6 +17,7 @@ const methodOverride = require('method-override')
  * import routers from controllers/
  *
  */
+const { landingRouter } = require('./controllers/landing.js')
 const { collegeMascotRouter } = require('./controllers/collegeMascot.js')
 const { professionalMascotRouter } = require('./controllers/professionalMascot.js')
 
@@ -62,6 +63,7 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
+app.use('/', landingRouter)
 app.use('/', collegeMascotRouter)
 app.use('/', professionalMascotRouter)
 
