@@ -5,3 +5,19 @@
     align-content: center;
 
 }
+
+.main-landing-boxes{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid transparent;
+    border-style: solid;
+    padding: 15px;
+   
+
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+}

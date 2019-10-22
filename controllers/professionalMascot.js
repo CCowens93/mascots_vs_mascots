@@ -7,7 +7,7 @@ const professionalMascotApi = require('../models/professionalMascot.js')
 const professionalMascotRouter = express.Router()
 
 
-professionalMascotRouter.get('/mascot/new/professional', (req, res) => {
+professionalMascotRouter.get('/mascot', (req, res) => {
     res.render('newProfessionalMascotForm')
 })
 
@@ -18,7 +18,7 @@ professionalMascotRouter.get('/mascot/edit/:id', (req, res) => {
         })
 })
 //getAll
-professionalMascotRouter.get('/mascot', (req, res) => {
+professionalMascotRouter.get('/mascot/professional', (req, res) => {
     professionalMascotApi.getAllProfessionalMascots()
         .then((allProfessionalMascots) => {
             res.render('allProfessionalMascots', { allProfessionalMascots })

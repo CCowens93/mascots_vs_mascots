@@ -10,11 +10,9 @@ const collegeMascotRouter = express.Router()
 
 
 
-collegeMascotRouter.get('/mascot/new/college', (req, res) => {
+collegeMascotRouter.get('/mascot', (req, res) => {
   res.render('newCollegeMascotForm')
 })
-
-
 
 collegeMascotRouter.get('/mascot/edit/:id', (req, res) => {
   collegeMascotApi.getOneCollegeMascot(req.params.id)
@@ -25,7 +23,7 @@ collegeMascotRouter.get('/mascot/edit/:id', (req, res) => {
 
 
 //getAll
-collegeMascotRouter.get('/mascot', (req, res) => {
+collegeMascotRouter.get('/mascot/college', (req, res) => {
     collegeMascotApi.getAllCollegeMascots()
     .then((allCollegeMascots) => {
       res.render('allCollegeMascots', {allCollegeMascots})
