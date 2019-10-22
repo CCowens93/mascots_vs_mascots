@@ -1,0 +1,12 @@
+<h1>Edit Professional Mascot</h1>
+
+<form action="/mascot/{{_id}}?_method=PUT" method="POST">
+    <input type="text" name="professionalMascot" placeholder="mascot" value="{{professionalMascot}}"/>
+    <input type="text" name="location" placeholder="location" value="{{location}}"/>
+    <input type="number" name="professionalGameTime" placeholder="game time" value="{{professionalGameTime}}"/>
+    <input type="text" name="professionalStrengths" placeholder="strengths" value="{{professionalStrengths}}"/>
+    <input type="text" name="professionalWeaknesses" placeholder="weaknesses" value="{{professionalWeaknesses}}"/>
+    
+    <input type="submit" value="create"/>
+
+</form>

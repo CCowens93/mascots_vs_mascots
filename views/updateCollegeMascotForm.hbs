@@ -1,0 +1,13 @@
+<h1>Edit College Mascot</h1>
+
+<form action="/mascot/{{_id}}?_method=PUT" method="POST">
+    <input type="text" name="collegeMascot" placeholder="mascot" value="{{collegeMascot}}"/>
+    <input type="text" name="college" placeholder="college" value="{{college}}"/>
+    <input type="number" name="collegeGameTime" placeholder="game time" value="{{collegeGameTime}}"/>
+    <input type="text" name="collegeStrengths" placeholder="strengths" value="{{collegeStrengths}}"/>
+    <input type="text" name="collegeWeaknesses" placeholder="weaknesses"value="{{collegeWeaknesses}}"/>
+    
+    <input type="submit" value="create"/>
+
+</form>
+

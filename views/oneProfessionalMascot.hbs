@@ -1,16 +1,17 @@
-<p>{{collegeMascot}}</p>
+<p>{{professionalMascot}}</p>
 
-<p>College: {{college}}</p>
-<p>Game Time: {{collegeGameTime}}</p>
-<p>Strengths: {{collegeStrengths}}</p>
-<p>Weaknesses: {{collegeWeaknesses}}</p>
+<p>Location: {{location}}</p>
+<p>Game Time: {{professionalGameTime}}</p>
+<p>Strengths: {{professionalStrengths}}</p>
+<p>Weaknesses: {{professionalWeaknesses}}</p>
 
 <a href="/mascot/edit/{{_id}}">
 <button>Edit Mascot</button>
 </a>
 
 
-{{#each getCollegeMascot}}
+
+{{#each getProfessionalMascot}}
     <a href="/mascot/{{_id}}">
     </a>
 {{/each}}
@@ -23,4 +24,3 @@
 <a href="/mascot">
       <button> Home </button>
     </a>
-
