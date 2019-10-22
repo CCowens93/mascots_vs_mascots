@@ -1,12 +1,15 @@
 <h1>All College Mascots</h1>
 
-<a href="/mascot">Create New College Mascot</a>
+<a href="/mascot/college/new">Create New College Mascot</a>
 
 
 {{#each allCollegeMascots}}
-<a href="/mascot/{{_id}}">
+<a href="/mascot/college/{{_id}}">
 <p>{{collegeMascot}}</p></a>
 {{/each}}
 
 
 
+<a href="/">
+      <button> Home </button>
+    </a>

@@ -7,16 +7,17 @@ const professionalMascotApi = require('../models/professionalMascot.js')
 const professionalMascotRouter = express.Router()
 
 
-professionalMascotRouter.get('/mascot', (req, res) => {
+professionalMascotRouter.get('/mascot/professional/new', (req, res) => {
     res.render('newProfessionalMascotForm')
 })
 
-professionalMascotRouter.get('/mascot/edit/:id', (req, res) => {
+professionalMascotRouter.get('/mascot/professional/edit/:id', (req, res) => {
     professionalMascotApi.getOneProfessionalMascot(req.params.id)
         .then((oneProfessionalMascot) => {
             res.render('updateProfessionalMascotForm', oneProfessionalMascot)
         })
 })
+
 //getAll
 professionalMascotRouter.get('/mascot/professional', (req, res) => {
     professionalMascotApi.getAllProfessionalMascots()
@@ -27,7 +28,7 @@ professionalMascotRouter.get('/mascot/professional', (req, res) => {
 
 
 //getOne
-professionalMascotRouter.get('/mascot/:id', (req, res) => {
+professionalMascotRouter.get('/mascot/professional/:id', (req, res) => {
     professionalMascotApi.getOneProfessionalMascot(req.params.id)
         .then((oneProfessionalMascot) => {
             res.render('oneProfessionalMascot', oneProfessionalMascot)
@@ -35,7 +36,7 @@ professionalMascotRouter.get('/mascot/:id', (req, res) => {
 })
 
 //update
-professionalMascotRouter.put('/mascot/:id', (req, res) => {
+professionalMascotRouter.put('/mascot/professional/:id', (req, res) => {
     professionalMascotApi.updateProfessionalMascot(req.params.id, req.body)
         .then((updatedProfessionalMascot) => {
             res.redirect(`/mascot/${req.params.id}`)
@@ -43,18 +44,18 @@ professionalMascotRouter.put('/mascot/:id', (req, res) => {
 })
 
 //create
-professionalMascotRouter.post('/mascot', (req, res) => {
+professionalMascotRouter.post('/mascot/professional', (req, res) => {
     professionalMascotApi.addNewProfessionalMascot(req.body)
         .then((createdProfessionalMascot) => {
-            res.redirect('/mascot')
+            res.redirect('/mascot/professional')
         })
 })
 
 //delete
-professionalMascotRouter.delete('/mascot/:id', (req, res) => {
+professionalMascotRouter.delete('/mascot/professional/:id', (req, res) => {
     professionalMascotApi.deleteProfessionalMascot(req.params.id)
         .then((deletedProfessionalMascot) => {
-            res.redirect('/mascot')
+            res.redirect('/mascot/professional')
         })
 })
 

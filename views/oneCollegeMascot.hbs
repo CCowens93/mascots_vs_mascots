@@ -5,22 +5,22 @@
 <p>Strengths: {{collegeStrengths}}</p>
 <p>Weaknesses: {{collegeWeaknesses}}</p>
 
-<a href="/mascot/edit/{{_id}}">
+<a href="/mascot/college/edit/{{_id}}">
 <button>Edit Mascot</button>
 </a>
 
 
 {{#each getCollegeMascot}}
-    <a href="/mascot/{{_id}}">
+    <a href="/mascot/college/{{_id}}">
     </a>
 {{/each}}
 
 
-<form action="/mascot/{{_id}}?_method=DELETE" method="POST">
+<form action="/mascot/college/{{_id}}?_method=DELETE" method="POST">
     <input type="submit" value="Delete Mascot" />
 </form>
 
-<a href="/mascot">
+<a href="/">
       <button> Home </button>
     </a>
 

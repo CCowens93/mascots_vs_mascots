@@ -1,20 +1,15 @@
 const express = require('express')
 
-
 const collegeMascotApi = require('../models/collegeMascot.js')
-
 
 const collegeMascotRouter = express.Router()
 
 
-
-
-
-collegeMascotRouter.get('/mascot', (req, res) => {
+collegeMascotRouter.get('/mascot/college/new', (req, res) => {
   res.render('newCollegeMascotForm')
 })
 
-collegeMascotRouter.get('/mascot/edit/:id', (req, res) => {
+collegeMascotRouter.get('/mascot/college/edit/:id', (req, res) => {
   collegeMascotApi.getOneCollegeMascot(req.params.id)
   .then((oneCollegeMascot) => {
     res.render('updateCollegeMascotForm', oneCollegeMascot)
@@ -32,7 +27,7 @@ collegeMascotRouter.get('/mascot/college', (req, res) => {
 
 
 //getOne
-collegeMascotRouter.get('/mascot/:id', (req, res) => {
+collegeMascotRouter.get('/mascot/college/:id', (req, res) => {
   collegeMascotApi.getOneCollegeMascot(req.params.id)
   .then((oneCollegeMascot) => {
     res.render('oneCollegeMascot', oneCollegeMascot)
@@ -41,7 +36,7 @@ collegeMascotRouter.get('/mascot/:id', (req, res) => {
 
 
 //update
-collegeMascotRouter.put('/mascot/:id', (req, res) => {
+collegeMascotRouter.put('/mascot/college/:id', (req, res) => {
   collegeMascotApi.updateCollegeMascot(req.params.id, req.body)
   .then((updatedCollegeMascot) => {
     res.redirect(`/mascot/${req.params.id}`)
@@ -50,19 +45,19 @@ collegeMascotRouter.put('/mascot/:id', (req, res) => {
 
 
 //create
-collegeMascotRouter.post('/mascot', (req, res) => {
+collegeMascotRouter.post('/mascot/college', (req, res) => {
   collegeMascotApi.addNewCollegeMascot(req.body)
   .then((createdCollegeMascot) => {
-    res.redirect('/mascot')
+    res.redirect('/mascot/college')
   })
 })
 
 
 //delete
-collegeMascotRouter.delete('/mascot/:id', (req, res) => {
+collegeMascotRouter.delete('/mascot/college/:id', (req, res) => {
   collegeMascotApi.deleteCollegeMascot(req.params.id)
   .then((deletedCollegeMascot) => {
-    res.redirect('/mascot')
+    res.redirect('/mascot/college')
   })
 })
 
