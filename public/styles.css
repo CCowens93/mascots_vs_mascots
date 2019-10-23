@@ -13,11 +13,19 @@
     border: 10px solid transparent;
     border-style: solid;
     padding: 15px;
-   
-
-}
+    
+   }
 
 h1{
     display:flex;
     justify-content: center;
+    
+}
+
+img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
 }
