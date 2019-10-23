@@ -1,0 +1,24 @@
+<p>{{fakeMascot}}</p>
+
+<p>Location: {{fakeLocation}}</p>
+<p>Game Time: {{fakeGameTime}}</p>
+<p>Strengths: {{fakeStrengths}}</p>
+<p>Weaknesses: {{fakeWeaknesses}}</p>
+
+<a href="/mascot/fake/edit/{{_id}}">
+<button>Edit Mascot</button>
+</a>
+
+{{#each getFakeMascots}}
+    <a href="/mascot/fake/{{_id}}">
+    </a>
+{{/each}}
+
+<form action="/mascot/fake/{{_id}}?_method=DELETE"
+method="POST">
+    <input type="submit" value="Delete Mascot"/>
+</form>
+
+<a href="/">
+    <button> Home </button>
+</a>

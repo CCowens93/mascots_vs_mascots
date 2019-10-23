@@ -20,6 +20,7 @@ const methodOverride = require('method-override')
 const { landingRouter } = require('./controllers/landing.js')
 const { collegeMascotRouter } = require('./controllers/collegeMascot.js')
 const { professionalMascotRouter } = require('./controllers/professionalMascot.js')
+const { fakeMascotRouter } = require('./controllers/createYourOwn.js')
 
 
 /* Step 3
@@ -66,6 +67,7 @@ app.set('view engine', 'hbs')
 app.use('/', landingRouter)
 app.use('/', collegeMascotRouter)
 app.use('/', professionalMascotRouter)
+app.use('/', fakeMascotRouter)
 
 
 /* Step 5
