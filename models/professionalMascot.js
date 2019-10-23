@@ -5,8 +5,11 @@ const professionalMascotSchema = new mongoose.Schema({
     professionalMascot: String,
     professionalGameTime: Date,
     professionalStrengths: String,
-    professionalWeaknesses: String
+    professionalWeaknesses: String,
+    professionalPicture: String
 })
+
+
 
 const professionalMascotCollection = mongoose.model('professionalMascots', professionalMascotSchema)
 

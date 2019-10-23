@@ -1,9 +1,14 @@
-<p>{{professionalMascot}}</p>
+<h1>{{professionalMascot}}</h1>
 
 <p>Location: {{location}}</p>
 <p>Game Time: {{professionalGameTime}}</p>
 <p>Strengths: {{professionalStrengths}}</p>
 <p>Weaknesses: {{professionalWeaknesses}}</p>
+<p>Picture:
+     {{#if professionalPicture}}
+        <img src="{{professionalPicture}}" height=250/>
+    {{/if}}
+</p>
 
 <a href="/mascot/professional/edit/{{_id}}">
 <button>Edit Mascot</button>

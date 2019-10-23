@@ -8,13 +8,12 @@ const collegeMascotSchema = new mongoose.Schema({
     collegeGameTime: Date,
     collegeStrengths: String,
     collegeWeaknesses: String,
+    collegePicture: String
 })
 
 
 
 const collegeMascotCollection = mongoose.model('collegeMascots', collegeMascotSchema)
-
-
 
 
 //getAll

@@ -1,9 +1,14 @@
-<p>{{fakeMascot}}</p>
+<h1>{{fakeMascot}}</h1>
 
 <p>Location: {{fakeLocation}}</p>
 <p>Game Time: {{fakeGameTime}}</p>
 <p>Strengths: {{fakeStrengths}}</p>
 <p>Weaknesses: {{fakeWeaknesses}}</p>
+<p>Picture:
+     {{#if fakePicture}}
+        <img src="{{fakePicture}}" height=250/>
+    {{/if}}
+</p>
 
 <a href="/mascot/fake/edit/{{_id}}">
 <button>Edit Mascot</button>

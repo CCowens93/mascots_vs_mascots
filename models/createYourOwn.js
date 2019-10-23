@@ -5,7 +5,8 @@ const createYourOwnSchema = new mongoose.Schema({
     fakeMascot: String,
     fakeGameTime: Date,
     fakeStrengths: String,
-    fakeWeaknesses: String
+    fakeWeaknesses: String,
+    fakePicture: String
 })
 
 

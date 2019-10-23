@@ -22,6 +22,11 @@ h1{
     
 }
 
+p {
+    display:flex;
+    justify-content: center;
+}
+
 img {
     display: flex;
     flex-direction: row;
