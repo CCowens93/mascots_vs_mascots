@@ -5,25 +5,29 @@
 <p>Strengths: {{professionalStrengths}}</p>
 <p>Weaknesses: {{professionalWeaknesses}}</p>
 <p>Picture:
-     {{#if professionalPicture}}
-        <img src="{{professionalPicture}}" height=250/>
+    {{#if professionalPicture}}
+    <img src="{{professionalPicture}}" height=250 />
     {{/if}}
 </p>
 
-<a href="/mascot/professional/edit/{{_id}}">
-<button>Edit Mascot</button>
-</a>
 
-{{#each getProfessionalMascot}}
+<div class="controls">
+    <a href="/mascot/professional/edit/{{_id}}">
+        <button>Edit Mascot</button>
+    </a>
+
+    {{#each getProfessionalMascot}}
     <a href="/mascot/professional/{{_id}}">
     </a>
-{{/each}}
+    {{/each}}
 
 
-<form action="/mascot/professional/{{_id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Mascot" />
-</form>
+    <form action="/mascot/professional/{{_id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Mascot" />
+    </form>
 
-<a href="/">
-      <button> Home </button>
+    <a href="/">
+        <button> Home </button>
     </a>
+
+</div>

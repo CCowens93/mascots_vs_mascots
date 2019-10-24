@@ -24,7 +24,7 @@ const getOneFakeMascot = (id) => {
 }
 
 //update
-const updateFakeCollegeMascot = (id, newFakeMascot) => {
+const updateFakeMascot = (id, newFakeMascot) => {
     return fakeMascotCollection.updateOne({_id: id}, newFakeMascot)
 }
 
@@ -43,6 +43,6 @@ module.exports = {
     getAllFakeMascots,
     getOneFakeMascot,
     addNewFakeMascot,
-    updateFakeCollegeMascot,
+    updateFakeMascot,
     deleteFakeMascot
 }

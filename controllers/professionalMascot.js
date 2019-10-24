@@ -39,7 +39,7 @@ professionalMascotRouter.get('/mascot/professional/:id', (req, res) => {
 professionalMascotRouter.put('/mascot/professional/:id', (req, res) => {
     professionalMascotApi.updateProfessionalMascot(req.params.id, req.body)
         .then((updatedProfessionalMascot) => {
-            res.redirect(`/mascot/${req.params.id}`)
+            res.redirect(`/mascot/professional/${req.params.id}`)
         })
 })
 
