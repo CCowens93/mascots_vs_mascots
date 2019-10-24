@@ -38,7 +38,7 @@ fakeMascotRouter.get('/mascot/fake/new', (req, res) => {
   fakeMascotRouter.put('/mascot/fake/:id', (req, res) => {
     fakeMascotApi.updateFakeMascot(req.params.id, req.body)
     .then((updatedFakeMascot) => {
-      res.redirect(`/mascot/${req.params.id}`)
+      res.redirect(`/mascot/fake/${req.params.id}`)
     })
   })
   

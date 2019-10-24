@@ -39,7 +39,7 @@ collegeMascotRouter.get('/mascot/college/:id', (req, res) => {
 collegeMascotRouter.put('/mascot/college/:id', (req, res) => {
   collegeMascotApi.updateCollegeMascot(req.params.id, req.body)
   .then((updatedCollegeMascot) => {
-    res.redirect(`/mascot/${req.params.id}`)
+    res.redirect(`/mascot/college/${req.params.id}`)
   })
 })
 
