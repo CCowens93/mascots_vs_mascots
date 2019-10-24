@@ -14,7 +14,7 @@ professionalMascotRouter.get('/mascot/professional/new', (req, res) => {
 professionalMascotRouter.get('/mascot/professional/edit/:id', (req, res) => {
     professionalMascotApi.getOneProfessionalMascot(req.params.id)
         .then((oneProfessionalMascot) => {
-            res.render('updateProfessionalMascotForm', oneProfessionalMascot)
+            res.render('updateProfessionalMascot', oneProfessionalMascot)
         })
 })
 
