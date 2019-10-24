@@ -19,6 +19,8 @@
 h1{
     display:flex;
     justify-content: center;
+    color: #1000ff;
+    size: 100px;
     
 }
 
@@ -34,4 +36,31 @@ img {
     align-items: center;
     
 
+}
+
+.main-link{
+    display:inline-block;
+    width: 425px;
+    height: 500px;
+    padding: 50px;
+    border: 5px groove black;
+    
+    
+}
+
+a {
+    display:flex;
+    justify-content: center;
+}
+
+body {
+    background-image: url('brickwall.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.allButton{
+    display:flex;
+    justify-content: center;
 }
