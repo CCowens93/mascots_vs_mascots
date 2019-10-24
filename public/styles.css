@@ -14,19 +14,23 @@
     border-style: solid;
     padding: 15px;
     
-   }
+}
 
 h1{
     display:flex;
     justify-content: center;
-    color: #1000ff;
-    size: 100px;
+    color: maroon;
+    font-size: 50px;
     
 }
 
 p {
     display:flex;
     justify-content: center;
+    color: gold;
+    font-size: 30px;
+    line-height: 0.3;
+    
 }
 
 img {
@@ -41,9 +45,10 @@ img {
 .main-link{
     display:inline-block;
     width: 425px;
-    height: 500px;
-    padding: 50px;
+    height: 450px;
+    padding: 40px;
     border: 5px groove black;
+    
     
     
 }
@@ -51,6 +56,7 @@ img {
 a {
     display:flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 body {
@@ -63,4 +69,14 @@ body {
 .allButton{
     display:flex;
     justify-content: center;
+    
+}
+
+#collegeMascot {
+    display:flex;
+    justify-content: center;
+}
+ 
+.input{
+    text-decoration: none;
 }
