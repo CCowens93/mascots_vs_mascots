@@ -57,6 +57,8 @@ a {
     display:flex;
     justify-content: center;
     text-decoration: none;
+    color: black;
+    font-size: 30px;
 }
 
 body {
