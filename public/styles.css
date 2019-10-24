@@ -50,17 +50,14 @@ img {
     height: 400px;
     padding: 30px;
     
-    
-    
-    
 }
-
 a {
     display:flex;
     justify-content: center;
     text-decoration: none;
     color: black;
-    font-size: 30px;
+    font-size: 40px;
+    text-shadow: 1px 1px black;
     
 }
 
@@ -115,4 +112,26 @@ input{
 .controls{
     display:flex;
     justify-content: space-around;
+    background-color: rgb(43, 8, 170);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+}
+
+.comment{
+    display:flex;
+    align-items: center;
+   
+}
+.submit{
+    background: #eb94d0;
+}
+
+#title{
+    width:500px;
+    height:100px
 }
