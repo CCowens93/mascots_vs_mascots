@@ -129,6 +129,7 @@ input{
 }
 .submit{
     background: #eb94d0;
+    
 }
 
 #title{
@@ -136,6 +137,11 @@ input{
     height:100px
 }
 button{
-    font-size: 25px;
+    font-size: 20px;
     padding: 12px 28px;
 }
+/* .delete{
+    font-size: 20px;
+    padding: 12px 28px;
+} */
+
