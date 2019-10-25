@@ -39,6 +39,8 @@ img {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 5px 5px #000;
+    border-style:outset;
     
     
 
@@ -140,8 +142,6 @@ button{
     font-size: 20px;
     padding: 12px 28px;
 }
-/* .delete{
-    font-size: 20px;
-    padding: 12px 28px;
-} */
+
+
 
