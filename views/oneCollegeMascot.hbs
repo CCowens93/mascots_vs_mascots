@@ -5,31 +5,30 @@
 <p>Strengths: {{collegeStrengths}}</p>
 <p>Weaknesses: {{collegeWeaknesses}}</p>
 <p>Picture:
-     {{#if collegePicture}}
-        <img src="{{collegePicture}}" height=200/>
+    {{#if collegePicture}}
+    <img src="{{collegePicture}}" height=200 />
     {{/if}}
 </p>
 
 
 <div class="controls">
-<a href="/mascot/college/edit/{{_id}}">
-<button>Edit Mascot</button>
-</a>
+    <a href="/mascot/college/edit/{{_id}}">
+        <button>Edit Mascot</button>
+    </a>
 
 
-{{#each getCollegeMascot}}
+    {{#each getCollegeMascot}}
     <a href="/mascot/college/{{_id}}">
     </a>
-{{/each}}
+    {{/each}}
 
+    <div class="delete">
+        <form action="/mascot/college/{{_id}}?_method=DELETE" method="POST">
+        </form>
+    </div>
 
-<form action="/mascot/college/{{_id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Mascot" />
-</form>
-
-<a href="/">
-      <button> Home </button>
+    <a href="/">
+        <button> Home </button>
     </a>
 
-</div>  
-
+</div>
