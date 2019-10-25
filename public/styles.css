@@ -33,14 +33,16 @@ p {
     text-shadow: 3px 2px black;
     
 }
-
+.image{
+    box-shadow: 5px 5px #000;
+    border-style:outset;
+}
 img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 5px 5px #000;
-    border-style:outset;
+    
 }
 
 .main-link{
@@ -138,6 +140,9 @@ input{
 button{
     font-size: 20px;
     padding: 12px 28px;
+}
+footer{
+    font-size:30px;
 }
 
 
