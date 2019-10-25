@@ -4,4 +4,4 @@ This app is for those, like me, who are frequently being forced to watch a footb
 
 #heroku link https://dashboard.heroku.com/apps/dry-wildwood-56838/deploy/heroku-git
 
-#wireframe 
+#ERD and wireframe https://imgur.com/a/Bq68Yr7
